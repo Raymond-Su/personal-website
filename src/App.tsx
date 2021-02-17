@@ -1,19 +1,39 @@
 import React, { FC } from 'react';
-import logo from './logo.svg';
+
+import Header from './components/Header';
+import Social from './components/Social';
+
+import Home from './containers/Home';
+import NoMatch from './containers/NoMatch';
+import Experiences from './containers/Experiences';
+import Projects from './containers/Projects';
+
 import './App.css';
 
 const App: FC = () => {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Social />
+      {/* <Header />
+      <Greeting />
+      <Skills />
+      <StackProgress />
+      <Education />
+      <WorkExperience />
+      <Projects />
+      <StartupProject />
+      <Achievement />
+      <Blogs />
+      <Talks />
+      <Twitter />
+      <Podcast />
+      <Profile />
+      <Footer />
+      <Top /> */}
+      <Home />
+      <Experiences />
+      <Projects />
     </div>
   );
 };

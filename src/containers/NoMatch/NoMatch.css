@@ -1,0 +1,22 @@
+.no-match-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.no-match-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.coming-soon {
+  text-transform: capitalize !important;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 70px;
+  color: #333333;
+  font-weight: bolder;
+  margin: 0;
+  text-align: center;
+}
