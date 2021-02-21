@@ -1,12 +1,24 @@
 import React, { FC } from 'react';
 import './Experiences.css';
+import ExperienceCard from '../../components/ExperienceCard';
+import { Fade } from 'react-awesome-reveal';
+import { workExperiences } from '../../data/experiences';
 
 const Experiences: FC = () => {
   return (
-    <div className='experiences-container'>
-      <div className='experiences-body'>
-        <h1 className='coming-soon'>Coming Soon</h1>
-      </div>
+    <div id='experiences'>
+      <Fade duration={1500}>
+        <div className='experience-container' id='workExperience'>
+          <div>
+            <h1 className='experience-heading'>Experiences</h1>
+            <div className='experience-cards-div'>
+              {workExperiences.map((card, i) => {
+                return <ExperienceCard key={i} cardInfo={card} />;
+              })}
+            </div>
+          </div>
+        </div>
+      </Fade>
     </div>
   );
 };

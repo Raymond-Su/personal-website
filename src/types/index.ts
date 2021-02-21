@@ -3,7 +3,20 @@ export interface project {
   cardImage: string;
   description: string;
   tags: Array<string>;
-  tagimg: string;
-  Previewlink: string;
-  Githublink: string;
+  links: link[];
+}
+
+export interface link {
+  name: string;
+  url: string;
+}
+
+export interface experience {
+  role: string;
+  company: string;
+  companylogo: string;
+  companylogoColour: string;
+  date: string;
+  desc: string;
+  descBullets?: Array<string>;
 }

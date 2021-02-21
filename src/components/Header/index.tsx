@@ -1,30 +1,11 @@
-import React, { FC, useState } from 'react';
-import menuIcon from '../../assets/menu-icon.svg';
-import classnames from 'classnames';
+import React, { FC } from 'react';
 import Headroom from 'react-headroom';
 
 import './Header.css';
 
 const Header: FC = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
   return (
     <Headroom>
-      {/* <header
-        className={classnames({
-          topnav: true,
-          responsive: click
-        })}
-        id='myTopnav'
-      >
-        <a href='/'>Home</a>
-        <a href='/Journey'>Journey</a>
-        <a href='/Projects'>Projects</a>
-        <div className='icon' onClick={handleClick}>
-          <img src={menuIcon} alt='menu icon' className='menuIcon' />
-        </div>
-      </header> */}
       <header className='header'>
         <a href='/' className='logo'>
           <span className='grey-color'> &lt;</span>
@@ -33,26 +14,20 @@ const Header: FC = () => {
         </a>
         <input className='menu-btn' type='checkbox' id='menu-btn' />
         <label className='menu-icon' htmlFor='menu-btn' style={{ color: 'white' }}>
-          <span className={'navicon'}></span>
+          <span className='navicon' />
         </label>
-        <ul className={'menu'}>
+        <ul className='menu'>
+          <li>
+            <a href='#Home'>About Me</a>
+          </li>
           <li>
             <a href='#skills'>Skills</a>
           </li>
           <li>
-            <a href='#experience'>Work Experiences</a>
+            <a href='#experiences'>Work Experiences</a>
           </li>
           <li>
-            <a href='#opensource'>Open Source</a>
-          </li>
-          <li>
-            <a href='#achievements'>Achievements</a>
-          </li>
-          <li>
-            <a href='#blogs'>Blogs</a>
-          </li>
-          <li>
-            <a href='#talks'>Talks</a>
+            <a href='#projects'>Projects</a>
           </li>
           <li>
             <a href='#contact'>Contact Me</a>

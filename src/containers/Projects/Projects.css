@@ -1,86 +1,88 @@
-.project-container {
-  height: 100%;
-  justify-content: center;
-  padding: 0 10%;
+.projects-section {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
 }
 
-.project-body {
+.card-subtitle {
+  color: #666666;
+  font-size: 17px;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .project-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1em 1rem;
+}
+
+.project-card {
   display: flex;
   flex-direction: column;
-}
-
-.row {
-  display: flex;
-  row-gap: 3em;
-}
-
-.page-content {
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 43%;
-  column-gap: 3rem;
-  margin: 0 2rem;
-  transition: width 0.8s;
-}
-
-.column {
-  float: left;
-  margin-bottom: 2rem;
-}
-
-.card .wrapper {
-  background-color: #fff;
-  border: 0;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  border: 1px solid rgba(211, 211, 211, 0.397);
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   min-height: 20rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 19px 38px var(--shadow1), 0 15px 12px var(--shadow2);
 }
 
-.card .wrapper:hover .data {
+.project-card:hover .project-data {
   transform: translateY(0);
 }
 
-.card .data {
-  position: absolute;
+.project-data {
   width: 100%;
   transition: all ease-in-out 0.3s;
   background: rgba(0, 0, 0, 0.55);
   height: 100%;
-}
-
-.card .data .content {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.55);
+  transform: translateY(80%);
   padding: 1em;
-  position: absolute;
-  z-index: 1;
-  margin-bottom: 0px;
 }
 
-.card .title-div {
+.project-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title-div {
   width: 100%;
   height: 25%;
-  margin: 0;
-  margin-bottom: 3em;
 }
 
-.card .title {
-  margin-top: 0em;
+.project-title {
   font-size: 1.2em;
+  margin-block: 0px;
 }
 
-.tagbutton {
-  background-color: #b6bcebfd;
-  color: #0117e7;
+.project-description {
+  flex-grow: 1;
+}
+
+.project-tag-div {
+  background-color: #c3b5d0;
+  color: #55198b;
   margin-top: 5px;
   margin-right: 11px;
-  border-radius: 100px;
+  border-radius: 4px;
   border: none;
   padding: 5px 10px;
   outline: none;
@@ -89,27 +91,35 @@
   display: inline-flex;
 }
 
-.tagbutton span {
-  padding-right: 5.5px;
+.project-tagimg {
+  margin: auto auto;
+  outline: none;
+  height: 12px;
+}
+
+.project-tag-div span {
+  padding: 5.5px;
   align-self: center;
 }
 
-.tagimg {
-  width: 1rem;
-  margin: auto 0;
-  outline: none;
-  margin-left: -8px;
+.project-links {
+  margin-top: 1em;
 }
 
-.skill-card {
-  width: 450px;
-  border: 0;
-  border-radius: 10px;
-}
-
-.skill-card .data {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.55);
-  transform: translateY(75%);
-  padding: 5px;
+span.project-link {
+  background: #55198b;
+  color: #f5f2f4;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin-right: 11px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
 }

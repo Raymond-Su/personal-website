@@ -1,45 +1,70 @@
 import React, { FC } from 'react';
-import { projectsList, tagImages } from '../../data/projects';
 import './Projects.css';
+import { Fade } from 'react-awesome-reveal';
+import { projectsList, projectsSummary } from '../../data/projects';
+import { CDNSkillImages, fontAwesomeImages } from '../../data/skills';
 
 const Projects: FC = () => {
+  function openProjectInNewWindow(url: string) {
+    const win = window.open(url, '_blank');
+    win?.focus();
+  }
   return (
-    <div className='project-container'>
-      <div className='project-body'>
-        <div className='projectcards row page-content'>
-          {projectsList.map(({ title, cardImage, description, tags }, index) => (
-            <div className='column skill-card card' key={`project-index-${index}`}>
-              <div
-                className='wrapper'
-                style={{ background: `url(${cardImage}) center / cover no-repeat` }}
-              >
-                <div className='data'>
-                  <div className='content'>
-                    <div className='title-div'>
-                      <p className='title'>{title}</p>
+    <Fade duration={1000}>
+      <div className='main' id='projects'>
+        <div className='projects-section'>
+          {/* Skills Heading not apart of CSS */}
+          <h1 className='skills-heading'>{projectsSummary.title}</h1>
+          <p className='subTitle project-subtitle'>{projectsSummary.subtitle}</p>
+
+          <div className='projects-container'>
+            {projectsList.map((project, i) => {
+              return (
+                <div
+                  key={i}
+                  className='project-card'
+                  style={{ background: `url(${project.cardImage}) center / cover no-repeat` }}
+                >
+                  <div className='project-data'>
+                    <div className='project-content'>
+                      <div className='project-title-div'>
+                        <p className='project-title'>{project.title}</p>
+                      </div>
+                      <div className='project-description'>
+                        <p>{project.description}</p>
+                      </div>
+                      <div className='project-tags'>
+                        {project.tags.map((tag, tagIndex) => (
+                          <div className='project-tag-div' key={`tag-div-${tagIndex}`}>
+                            {Object.keys(fontAwesomeImages).includes(tag) ? (
+                              <i className={`${fontAwesomeImages[tag]} project-tagimg`} />
+                            ) : (
+                              <img className='project-tagimg' src={CDNSkillImages[tag]} alt='' />
+                            )}
+                            <span>{tag}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className='project-links'>
+                        {project.links.map((link, i) => (
+                          <span
+                            key={i}
+                            className='project-link'
+                            onClick={() => openProjectInNewWindow(link.url)}
+                          >
+                            {link.name}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className='description'>
-                      <p>{description}</p>
-                    </div>
-                    {tags.map((tag, tagIndex) => (
-                      <button className='tagbutton' key={`tag-button-${tagIndex}`}>
-                        <img
-                          className='tagbutton tagimg'
-                          width='40px'
-                          src={tagImages[tag]}
-                          alt=''
-                        />
-                        <span>{tag}</span>
-                      </button>
-                    ))}
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

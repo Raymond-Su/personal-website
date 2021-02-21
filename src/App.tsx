@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 
 import Header from './components/Header';
-import Social from './components/Social';
-
+import Social from './components/SocialFloater';
 import Home from './containers/Home';
-import NoMatch from './containers/NoMatch';
+import Skills from './containers/Skills';
 import Experiences from './containers/Experiences';
 import Projects from './containers/Projects';
+import Contact from './containers/Contact';
+import TopButton from './containers/TopButton';
 
 import './App.css';
 
@@ -15,25 +16,12 @@ const App: FC = () => {
     <div className='App'>
       <Header />
       <Social />
-      {/* <Header />
-      <Greeting />
-      <Skills />
-      <StackProgress />
-      <Education />
-      <WorkExperience />
-      <Projects />
-      <StartupProject />
-      <Achievement />
-      <Blogs />
-      <Talks />
-      <Twitter />
-      <Podcast />
-      <Profile />
-      <Footer />
-      <Top /> */}
       <Home />
+      <Skills />
       <Experiences />
       <Projects />
+      <Contact />
+      <TopButton />
     </div>
   );
 };

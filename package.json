@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.6.0",
     "classnames": "^2.2.6",
     "react": "^17.0.1",
+    "react-awesome-reveal": "^3.4.0",
     "react-dom": "^17.0.1",
     "react-headroom": "^3.1.0",
     "react-scripts": "4.0.1"
@@ -49,7 +50,6 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-headroom": "^2.2.1",
-    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
     "eslint": "^7.17.0",
