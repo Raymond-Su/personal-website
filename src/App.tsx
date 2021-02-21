@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
 import Header from './components/Header';
-import Social from './components/SocialFloater';
 import Home from './containers/Home';
 import Skills from './containers/Skills';
 import Experiences from './containers/Experiences';
@@ -15,7 +14,6 @@ const App: FC = () => {
   return (
     <div className='App'>
       <Header />
-      <Social />
       <Home />
       <Skills />
       <Experiences />

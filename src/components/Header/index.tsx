@@ -24,7 +24,7 @@ const Header: FC = () => {
             <a href='#skills'>Skills</a>
           </li>
           <li>
-            <a href='#experiences'>Work Experiences</a>
+            <a href='#experiences'>Experiences</a>
           </li>
           <li>
             <a href='#projects'>Projects</a>
