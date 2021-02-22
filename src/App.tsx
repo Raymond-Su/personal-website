@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+import SEO from './components/SEO';
 import Header from './components/Header';
 import Home from './containers/Home';
 import Skills from './containers/Skills';
@@ -13,6 +14,7 @@ import './App.css';
 const App: FC = () => {
   return (
     <div className='App'>
+      <SEO />
       <Header />
       <Home />
       <Skills />

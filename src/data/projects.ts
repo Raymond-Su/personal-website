@@ -55,7 +55,7 @@ export const projectsList: project[] = [
     description: 'My personal website for showing projects, blog posts and my programing journey.',
     tags: [techSkills.typeScript, techSkills.html5, techSkills.css3, techSkills.firebase],
     links: [
-      { name: 'Live Link', url: 'https://sydney-trains-game.herokuapp.com/' },
+      { name: 'Live Link', url: 'https://raymondsu.dev' },
       { name: 'Github', url: 'https://github.com/Raymond-Su/personal-website' }
     ]
   }
