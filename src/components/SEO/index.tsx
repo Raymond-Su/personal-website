@@ -12,7 +12,6 @@ const SEO: FC = () => {
         lang
       }}
       title={title}
-      titleTemplate={`%s | ${description}`}
       meta={[
         {
           name: `description`,
