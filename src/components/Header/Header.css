@@ -1,29 +1,24 @@
 /* header */
 .header {
-  background-color: #fff;
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;
+  background-color: #fff;
 }
 
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
 .grey-color {
   color: #868e96;
 }
 
-.header li a {
+.header a {
   display: block;
   padding: 15px 20px;
   color: black;
   text-decoration: none;
+  text-align: end;
 }
 
-.header li a:hover,
+.header a:hover,
 .header .menu-btn:hover {
   background-color: #f4f4f4;
 }
@@ -56,6 +51,7 @@
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  display: none;
 }
 
 /* menu icon */
@@ -105,6 +101,11 @@
 
 .header .menu-btn:checked ~ .menu {
   max-height: 486px;
+  display: block;
+}
+
+.header .menu-btn:checked ~ .menu-icon {
+  box-shadow: none;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -127,23 +128,17 @@
 /* 48em = 768px */
 
 @media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
   .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    background-color: white;
   }
   .header .menu {
     max-height: none;
+    display: flex;
   }
   .header .menu-icon {
     display: none;
-  }
-}
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
   }
 }
