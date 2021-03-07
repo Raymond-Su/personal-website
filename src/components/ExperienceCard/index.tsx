@@ -17,6 +17,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ cardInfo }: ExperienceCardPro
         </div>
 
         <img
+          loading='lazy'
           crossOrigin={'anonymous'}
           className='experience-roundedimg'
           src={cardInfo.companylogo}
