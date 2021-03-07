@@ -20,11 +20,8 @@ const Projects: FC = () => {
           <div className='projects-container'>
             {projectsList.map((project, i) => {
               return (
-                <div
-                  key={i}
-                  className='project-card'
-                  style={{ background: `url(${project.cardImage}) center / cover no-repeat` }}
-                >
+                <div key={i} className='project-card'>
+                  <img loading='lazy' src={project.cardImage} className='project-img' />
                   <div className='project-data'>
                     <div className='project-content'>
                       <div className='project-title-div'>
