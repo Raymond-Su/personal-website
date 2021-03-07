@@ -4,6 +4,8 @@ import holeInTheWall from '../assets/Projects/holeInTheWall.jpg';
 import sydneyTrainPuzzle from '../assets/Projects/sydneyTrainPuzzle.png';
 import genderNeural from '../assets/Projects/genderNeural.jpeg';
 import personalWebsite from '../assets/Projects/personalWebsite.png';
+import elementRotate from '../assets/Projects/elementRotate.png';
+import ticTacToe from '../assets/Projects/tictactoe.png';
 
 import { techSkills } from './skills';
 
@@ -12,6 +14,25 @@ export const projectsSummary = {
   subtitle: ''
 };
 export const projectsList: project[] = [
+  {
+    title: 'Ultimate Tic Tac Toe',
+    cardImage: ticTacToe,
+    description:
+      'A strategic version of Tic Tac Toe built using ReactJs, Mobx, NodeJs and Socket.io',
+    tags: [techSkills.css3, techSkills.expressJS, techSkills.reactjs, techSkills.nodejs],
+    links: [
+      { name: 'Live Link', url: 'https://ultimate-ttt-game.herokuapp.com/' },
+      { name: 'Github', url: 'https://github.com/Raymond-Su/UltimateTicTacToe' }
+    ]
+  },
+  {
+    title: 'Element Rotate',
+    cardImage: elementRotate,
+    description:
+      'Element Rotator is a Chrome extension that rotates elements on a webpage. It can even rotate the entire page!',
+    tags: [techSkills.javascript, techSkills.css3],
+    links: [{ name: 'Github', url: 'https://github.com/Raymond-Su/elementRotator' }]
+  },
   {
     title: 'Custom Chess Engine (In Progress)',
     cardImage: chess,
