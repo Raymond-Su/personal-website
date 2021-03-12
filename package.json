@@ -19,6 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "react-scripts build && firebase deploy",
     "lint": "eslint . --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx --quiet",
     "lint-fix": "eslint .  --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx --fix"
   },
