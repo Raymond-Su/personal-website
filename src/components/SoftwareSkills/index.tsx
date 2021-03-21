@@ -2,22 +2,26 @@ import './SoftwareSkill.css';
 
 import React, { FC } from 'react';
 
-import { CDNSkillImages,fontAwesomeImages, softwareSkills } from '../../data/skills';
+import { CDNSkillIcons, fontAwesomeSkillsIcons } from '../../assets/Skills';
 
-const SoftwareSkill: FC = () => {
+interface SoftwareSkillProps {
+  skills: string[];
+}
+
+const SoftwareSkill: FC<SoftwareSkillProps> = ({ skills }: SoftwareSkillProps) => {
   return (
     <div>
       <div className='software-skills-main-div'>
         <ul className='dev-icons'>
-          {softwareSkills.map((skills, i) => {
+          {skills.map((skill, i) => {
             return (
               <li key={i} className='software-skill-inline'>
-                {Object.keys(fontAwesomeImages).includes(skills) ? (
-                  <i className={fontAwesomeImages[skills]} />
+                {Object.keys(fontAwesomeSkillsIcons).includes(skill) ? (
+                  <i className={fontAwesomeSkillsIcons[skill]} />
                 ) : (
-                  <img src={CDNSkillImages[skills]} alt='' />
+                  <img src={CDNSkillIcons[skill]} alt='' />
                 )}
-                <p>{skills.toString()}</p>
+                <p>{skill.toString()}</p>
               </li>
             );
           })}

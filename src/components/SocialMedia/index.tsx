@@ -2,6 +2,7 @@ import './SocialMedia.css';
 
 import React, { FC } from 'react';
 
+import { fontAwesomeContactIcons } from '../../assets/Contact';
 import { contact } from '../../types';
 
 interface SocialMediaLinks {
@@ -22,7 +23,7 @@ const SocialMedia: FC<SocialMediaLinks> = ({ contacts, handleAnalytics }: Social
           onClick={() => handleLinkOpen(contact.type, contact.link)}
           key={`contact-${index}`}
         >
-          <i className={contact.faIcon} />
+          <i className={fontAwesomeContactIcons[contact.type]} />
         </div>
       ))}
     </div>

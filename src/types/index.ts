@@ -24,5 +24,4 @@ export interface experience {
 export interface contact {
   type: string;
   link: string;
-  faIcon: string;
 }
