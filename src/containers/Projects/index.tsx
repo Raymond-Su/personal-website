@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 import { projectsList, projectsSummary } from '../../data/projects';
-import { CDNSkillImages, fontAwesomeImages } from '../../data/skills';
+import { CDNSkillIcons, fontAwesomeSkillsIcons } from '../../assets/Skills';
 
 const Projects: FC = () => {
   function openProjectInNewWindow(url: string) {
@@ -35,10 +35,10 @@ const Projects: FC = () => {
                       <div className='project-tags'>
                         {project.tags.map((tag, tagIndex) => (
                           <div className='project-tag-div' key={`tag-div-${tagIndex}`}>
-                            {Object.keys(fontAwesomeImages).includes(tag) ? (
-                              <i className={`${fontAwesomeImages[tag]} project-tagimg`} />
+                            {Object.keys(fontAwesomeSkillsIcons).includes(tag) ? (
+                              <i className={`${fontAwesomeSkillsIcons[tag]} project-tagimg`} />
                             ) : (
-                              <img className='project-tagimg' src={CDNSkillImages[tag]} alt='' />
+                              <img className='project-tagimg' src={CDNSkillIcons[tag]} alt='' />
                             )}
                             <span>{tag}</span>
                           </div>
