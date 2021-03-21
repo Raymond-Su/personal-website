@@ -20,6 +20,7 @@
 .software-skill-inline > img {
   filter: grayscale(100%);
   width: 50px;
+  vertical-align: middle;
 }
 .software-skill-inline > img:hover {
   filter: sepia(100%) hue-rotate(200deg) saturate(2000%);

@@ -12,7 +12,7 @@ const Header: FC = () => {
           <span className='navicon' />
         </label>
         <div className='menu'>
-          <a href='#Home'>About Me</a>
+          <a href='#home'>About Me</a>
           <a href='#skills'>Skills</a>
           <a href='#experiences'>Experiences</a>
           <a href='#projects'>Projects</a>

@@ -42,10 +42,11 @@ export const softwareSkills: string[] = [
   techSkills.mongoDB,
   techSkills.tensorflow,
   techSkills.redux,
-  techSkills.typeScript
+  techSkills.typeScript,
+  techSkills.expressJS
 ];
 
-export const AboutMeWords = [
+export const interests = [
   'Front End Development',
   'Designing',
   'UI/UX',
