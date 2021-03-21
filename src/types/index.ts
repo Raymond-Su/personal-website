@@ -20,3 +20,9 @@ export interface experience {
   desc: string;
   descBullets?: Array<string>;
 }
+
+export interface contact {
+  type: string;
+  link: string;
+  faIcon: string;
+}
