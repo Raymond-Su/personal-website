@@ -1,6 +1,8 @@
-import firebase from 'firebase/app';
-import { productionEnv } from '../utils';
 import 'firebase/analytics';
+
+import firebase from 'firebase/app';
+
+import { productionEnv } from '../utils';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_GA_API_KEY,

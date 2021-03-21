@@ -1,6 +1,8 @@
-import React, { FC } from 'react';
 import './Projects.css';
+
+import React, { FC } from 'react';
 import { Fade } from 'react-awesome-reveal';
+
 import { projectsList, projectsSummary } from '../../data/projects';
 import { CDNSkillImages, fontAwesomeImages } from '../../data/skills';
 

@@ -1,6 +1,8 @@
-import React, { FC } from 'react';
 import './SoftwareSkill.css';
-import { softwareSkills, fontAwesomeImages, CDNSkillImages } from '../../data/skills';
+
+import React, { FC } from 'react';
+
+import { CDNSkillImages,fontAwesomeImages, softwareSkills } from '../../data/skills';
 
 const SoftwareSkill: FC = () => {
   return (

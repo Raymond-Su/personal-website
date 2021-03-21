@@ -1,13 +1,12 @@
-import { project } from '../types';
 import chess from '../assets/Projects/chess.jpg';
-import holeInTheWall from '../assets/Projects/holeInTheWall.jpg';
-import sydneyTrainPuzzle from '../assets/Projects/sydneyTrainPuzzle.png';
-import genderNeural from '../assets/Projects/genderNeural.jpeg';
-import personalWebsite from '../assets/Projects/personalWebsite.png';
 import elementRotate from '../assets/Projects/elementRotate.png';
-import ticTacToe from '../assets/Projects/tictactoe.png';
 import emojiRain from '../assets/Projects/emojiRain.png';
-
+import genderNeural from '../assets/Projects/genderNeural.jpeg';
+import holeInTheWall from '../assets/Projects/holeInTheWall.jpg';
+import personalWebsite from '../assets/Projects/personalWebsite.png';
+import sydneyTrainPuzzle from '../assets/Projects/sydneyTrainPuzzle.png';
+import ticTacToe from '../assets/Projects/tictactoe.png';
+import { project } from '../types';
 import { techSkills } from './skills';
 
 export const projectsSummary = {

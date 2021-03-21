@@ -1,7 +1,7 @@
+import './Header.css';
+
 import React, { FC } from 'react';
 import Headroom from 'react-headroom';
-
-import './Header.css';
 
 const Header: FC = () => {
   return (

@@ -1,15 +1,17 @@
-import React, { FC } from 'react';
-import { analyticslogEvent } from '../../analytics';
-import { contact } from '../../types';
 import './SocialMedia.css';
+
+import React, { FC } from 'react';
+
+import { contact } from '../../types';
 
 interface SocialMediaLinks {
   contacts: contact[];
+  handleAnalytics: (eventType: string, metrics: Record<string, unknown>) => void;
 }
 
-const SocialMedia: FC<SocialMediaLinks> = ({ contacts }: SocialMediaLinks) => {
+const SocialMedia: FC<SocialMediaLinks> = ({ contacts, handleAnalytics }: SocialMediaLinks) => {
   const handleLinkOpen = (contactType: string, link: string) => {
-    analyticslogEvent('Contact', { type: contactType });
+    handleAnalytics('Contact', { type: contactType });
     window.open(link);
   };
   return (

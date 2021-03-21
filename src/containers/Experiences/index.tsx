@@ -1,7 +1,9 @@
-import React, { FC } from 'react';
 import './Experiences.css';
-import ExperienceCard from '../../components/ExperienceCard';
+
+import React, { FC } from 'react';
 import { Fade } from 'react-awesome-reveal';
+
+import ExperienceCard from '../../components/ExperienceCard';
 import { workExperiences } from '../../data/experiences';
 
 const Experiences: FC = () => {

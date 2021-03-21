@@ -1,8 +1,10 @@
+import './Skills.css';
+
 import React, { FC } from 'react';
+import { Fade } from 'react-awesome-reveal';
+
 import SoftwareSkill from '../../components/SoftwareSkills';
 import { skillsSection } from '../../data/skills';
-import { Fade } from 'react-awesome-reveal';
-import './Skills.css';
 
 const Skills: FC = () => {
   return (

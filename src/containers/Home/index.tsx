@@ -1,6 +1,8 @@
-import React, { FC, useEffect, useState } from 'react';
-import { AboutMeWords } from '../../data/skills';
 import './Home.css';
+
+import React, { FC, useEffect, useState } from 'react';
+
+import { AboutMeWords } from '../../data/skills';
 
 const Home: FC = () => {
   const [index, setIndex] = useState(0);

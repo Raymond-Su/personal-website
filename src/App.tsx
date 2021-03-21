@@ -1,15 +1,15 @@
+import './App.css';
+
 import React, { FC } from 'react';
 
-import SEO from './components/SEO';
 import Header from './components/Header';
-import Home from './containers/Home';
-import Skills from './containers/Skills';
-import Experiences from './containers/Experiences';
-import Projects from './containers/Projects';
+import SEO from './components/SEO';
 import Contact from './containers/Contact';
+import Experiences from './containers/Experiences';
+import Home from './containers/Home';
+import Projects from './containers/Projects';
+import Skills from './containers/Skills';
 import TopButton from './containers/TopButton';
-
-import './App.css';
 
 const App: FC = () => {
   return (

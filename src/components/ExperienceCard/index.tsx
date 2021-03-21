@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
 import './ExperienceCard.css';
+
+import React, { FC } from 'react';
 
 import { experience } from '../../types';
 
