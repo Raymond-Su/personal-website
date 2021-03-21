@@ -5,6 +5,10 @@
   color: #333333;
   font-weight: bolder;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 3em;
+  }
 }
 
 .tagline {

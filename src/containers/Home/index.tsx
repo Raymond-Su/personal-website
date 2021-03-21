@@ -1,4 +1,4 @@
-import './Home.css';
+import './Home.scss';
 
 import React, { FC, useEffect, useState } from 'react';
 

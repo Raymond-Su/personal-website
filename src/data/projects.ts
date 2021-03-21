@@ -41,7 +41,7 @@ export const projectsList: project[] = [
     links: [{ name: 'Github', url: 'https://github.com/Raymond-Su/elementRotator' }]
   },
   {
-    title: 'Custom Chess Engine (In Progress)',
+    title: 'Custom Chess Engine',
     cardImage: chess,
     description:
       'A Chess application built using the MERN tech stack that allows players to play different chess game modes, view games and talk through chatrooms.',
@@ -73,7 +73,7 @@ export const projectsList: project[] = [
     title: 'Gender Recogniser Neural Net',
     cardImage: genderNeural,
     description:
-      'A machine learning application composed of a LMST Keras model and a Flask API that predicts the gender of given first name. The endpoints have ability to retrain and serve the Machine Learning model.',
+      'A machine learning application composed of a LMST Keras model and Flask server that predicts the gender of given first name.',
     tags: [techSkills.tensorflow, techSkills.python, techSkills.flask],
     links: [{ name: 'Github', url: 'https://github.com/Raymond-Su/GenderNameRecogniser' }]
   },
