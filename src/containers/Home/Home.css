@@ -1,16 +1,3 @@
-.home-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 10%;
-}
-
-.home-body {
-  display: flex;
-  flex-direction: column;
-}
-
 .fullname {
   text-transform: capitalize !important;
   font-family: 'Hammersmith One', sans-serif;
@@ -32,6 +19,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
+  justify-content: center;
 }
 
 .interests {

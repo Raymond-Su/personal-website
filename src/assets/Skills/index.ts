@@ -11,8 +11,7 @@ export const fontAwesomeSkillsIcons: Record<string, string> = {
   'SQL-Database': 'fas fa-database',
   Firebase: 'fas fa-fire',
   Python: 'fab fa-python',
-  Docker: 'fab fa-docker',
-  MongoDB: 'fag fa-database'
+  Docker: 'fab fa-docker'
 };
 
 export const CDNSkillIcons: Record<string, string> = {
@@ -20,5 +19,6 @@ export const CDNSkillIcons: Record<string, string> = {
   Typescript: 'https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png',
   Tensorflow: 'https://cdn-images-1.medium.com/max/1200/1*iDQvKoz7gGHc6YXqvqWWZQ.png',
   Flask: 'https://logowiki.net/uploads/logo/f/flask.svg',
-  ExpressJS: 'https://img2.pngio.com/express-js-png-5-png-image-expressjs-png-800_800.png'
+  ExpressJS: 'https://expressjs.com/images/express-facebook-share.png',
+  MongoDB: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/mongodb_logo_icon_170943.png'
 };

@@ -2,7 +2,8 @@ import './Home.css';
 
 import React, { FC, useEffect, useState } from 'react';
 
-import { AboutMeWords } from '../../data/skills';
+import { SectionContainer } from '../../components/Section';
+import { interests } from '../../data/skills';
 
 const Home: FC = () => {
   const [index, setIndex] = useState(0);
@@ -12,12 +13,12 @@ const Home: FC = () => {
 
   // typeWriter
   useEffect(() => {
-    if (index === AboutMeWords.length) {
+    if (index === interests.length) {
       setIndex(0);
       return;
     }
 
-    if (subIndex === AboutMeWords[index].length + 1 && index !== AboutMeWords.length && !reverse) {
+    if (subIndex === interests[index].length + 1 && index !== interests.length && !reverse) {
       setReverse(true);
       return;
     }
@@ -29,7 +30,7 @@ const Home: FC = () => {
     }
     const typingTimeout = setTimeout(() => {
       setSubIndex(prev => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 75 : subIndex === AboutMeWords[index].length ? 1000 : 50, Math.random() * 100));
+    }, Math.max(reverse ? 75 : subIndex === interests[index].length ? 1000 : 50, Math.random() * 100));
 
     return () => clearTimeout(typingTimeout);
   }, [subIndex, index, reverse]);
@@ -41,19 +42,18 @@ const Home: FC = () => {
     }, 500);
     return () => clearTimeout(blinkerTimeout);
   }, [blink]);
+
   return (
-    <div className='home-container' id='Home'>
-      <div className='home-body'>
-        <div className='intro'>
-          <h1 className='fullname'>RAYMOND SU</h1>
-          <h1 className='tagline'>SOFTWARE ENGINEER · DESIGN ENTHUSIAST</h1>
-          <p className='interests'>
-            I am into {AboutMeWords[index < AboutMeWords.length ? index : 0].substring(0, subIndex)}
-            {blink ? '|' : ''}
-          </p>
-        </div>
+    <SectionContainer id='home'>
+      <div className='intro'>
+        <h1 className='fullname'>RAYMOND SU</h1>
+        <h1 className='tagline'>SOFTWARE ENGINEER · DESIGN ENTHUSIAST</h1>
+        <p className='interests'>
+          I am into {interests[index < interests.length ? index : 0].substring(0, subIndex)}
+          {blink ? '|' : ''}
+        </p>
       </div>
-    </div>
+    </SectionContainer>
   );
 };
 export default Home;

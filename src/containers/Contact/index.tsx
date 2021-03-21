@@ -1,18 +1,17 @@
-import './Contact.css';
-
 import React, { FC } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 import { analyticslogEvent } from '../../analytics';
+import { SectionContainer } from '../../components/Section';
 import SocialMedia from '../../components/SocialMedia';
 import { contactsList } from '../../data/contact';
 
 const Contact: FC = () => {
   return (
     <Fade>
-      <div className='contact-div-main' id='contact'>
+      <SectionContainer id='contact'>
         <SocialMedia contacts={contactsList} handleAnalytics={analyticslogEvent} />
-      </div>
+      </SectionContainer>
     </Fade>
   );
 };
